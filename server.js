@@ -107,8 +107,9 @@ app.get('/user-delete/:id', (req, res) => {
 app.delete('/users/:id', (req, res) => {
   const id = req.params.id
   deleteUser(id)
-    .then((value) => {}, (reason) => {
+    .then((value) => {
+      return res.redirect('/')
+    }, (reason) => {
       console.log(reason);
     })
-  return res.redirect('/')
 })

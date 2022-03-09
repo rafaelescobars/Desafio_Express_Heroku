@@ -7,14 +7,6 @@ const {
   Client
 } = require('pg')
 
-//Client
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-})
-
 //getTodos
 const getUsers = async () => {
   //Client
